@@ -1,0 +1,81 @@
+#myorder {
+    width: 100%;
+    background-color: #f5f5f5;
+}
+
+.myorder {
+    width: 56%;
+    min-height: 100vh;
+    margin: auto;
+    padding: 1rem 0;
+    padding-top: 100px;
+}
+.myorder-menu {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 14px 20px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+        rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.myorder-menu-item {
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 1rem;
+    padding: 0.5rem 0;
+    background: white;
+    border: 1px solid #d70018;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.myorder-menu-item.active {
+    background: #d70018;
+}
+.myorder-menu-item a {
+    padding: 0 1rem;
+    color: #d70018;
+    display: block;
+}
+.myorder-menu-item.active a {
+    color: white;
+}
+.myorder-menu-item:hover {
+    background: #d70018;
+    transition: 0.3s;
+}
+.myorder-menu-item:hover a {
+    color: white;
+    transition: 0.3s;
+}
+
+.myorder-menu-item-newPendding,
+.myorder-menu-item-newShipping {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    background: #d70018;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+}
+
+@media screen and (max-width: 500px) {
+    .myorder {
+        width: 100%;
+    }
+    .myorder-content {
+        padding: 0 1rem;
+    }
+    .myorder-menu-item {
+        margin: 0.5rem 1%;
+        width: 48%;
+    }
+}
