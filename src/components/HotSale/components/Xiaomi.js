@@ -1,20 +1,19 @@
-import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ListProduct from "../ListProduct";
+import React, { useEffect, useState } from "react";
 
+import { BASE_URL } from "../../../constants/UserConstant";
 import { handlePercentDiscount } from "../../../untils/index";
-import { useDispatch } from "react-redux";
 
 function Xiaomi(props) {
-    const dispatch = useDispatch();
-    const [name, setName] = useState("xiaomi");
+    const name = "xiaomi";
     const [hotXiaomi, setHotXiaomi] = useState([]);
 
     useEffect(() => {
         async function FetchApi() {
             try {
                 const { data } = await axios.get(
-                    `http://localhost:4000/products/${name}`
+                    `${BASE_URL}/products/${name}`
                 );
                 setHotXiaomi(data);
             } catch (error) {}

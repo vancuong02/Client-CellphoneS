@@ -1,39 +1,40 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios'
-import ListProduct from '../ListProduct'
+import axios from "axios";
+import ListProduct from "../ListProduct";
+import React, { useEffect, useState } from "react";
 
-import {handlePercentDiscount} from '../../../untils/index'
-import { useDispatch} from 'react-redux';
+import { BASE_URL } from "../../../constants/UserConstant";
+import { handlePercentDiscount } from "../../../untils/index";
 
-
-function Samsung(props) {
-    const dispatch = useDispatch()
-    const [name, setName] = useState('samsung');
-    const [hotSamsung, setHotSamsung] = useState([])
+function Samsung() {
+    const name = "samsung";
+    const [hotSamsung, setHotSamsung] = useState([]);
 
     useEffect(() => {
-        async function FetchApi(){
+        async function FetchApi() {
             try {
-                const {data} = await axios.get(`http://localhost:4000/products/${name}`)
-                setHotSamsung(data)
-            } catch (error) {
-            }
+                const { data } = await axios.get(
+                    `${BASE_URL}/products/${name}`
+                );
+                setHotSamsung(data);
+            } catch (error) {}
         }
-        FetchApi()
-    }, [])
+        FetchApi();
+    }, []);
 
     return (
         <section id="hotsale">
             <div className="hotsale">
                 <h2>{name}</h2>
-                {
-                    hotSamsung ? (<ListProduct HotSaleProducts={handlePercentDiscount(hotSamsung)}></ListProduct>) : ''
-                }
+                {hotSamsung ? (
+                    <ListProduct
+                        HotSaleProducts={handlePercentDiscount(hotSamsung)}
+                    ></ListProduct>
+                ) : (
+                    ""
+                )}
             </div>
         </section>
-
     );
 }
-
 
 export default Samsung;

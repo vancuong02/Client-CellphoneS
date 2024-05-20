@@ -4,16 +4,16 @@ import axios from "axios";
 import ListProduct from "../ListProduct";
 import { handlePercentDiscount } from "../../../untils/index";
 import { useDispatch } from "react-redux";
+import { BASE_URL } from "../../../constants/UserConstant";
 
 function Iphone(props) {
-    const dispatch = useDispatch();
-    const [name, setName] = useState("iphone");
     const [hotIphone, setHotIphone] = useState([]);
+    const name = "iphone";
     useEffect(() => {
         async function FetchApi() {
             try {
                 const { data } = await axios.get(
-                    `http://localhost:4000/products/${name}`
+                    `${BASE_URL}/products/${name}`
                 );
                 setHotIphone(data);
             } catch (error) {}

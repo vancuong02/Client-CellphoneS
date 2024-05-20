@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from "react-redux";
 import "./Login.css";
 import { login } from "../../actions/UserAction";
 
-function Login(props) {
+function Login() {
     const dispatch = useDispatch();
     const history = useHistory();
     const {
