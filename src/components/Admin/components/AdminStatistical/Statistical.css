@@ -1,0 +1,56 @@
+.statistics-title {
+    margin: 0 80px 20px 80px;
+    text-align: left;
+    font-size: 26px;
+    padding: 10px 0;
+    font-weight: 600;
+    border-bottom: 1px solid #fff;
+}
+
+/* Chart */
+.statistical-chart {
+    width: 86%;
+    display: flex;
+    padding: 20px;
+    background: #fff;
+    margin: 0px auto 0 auto;
+}
+
+/* Input */
+.statistical-input-element {
+    gap: 8px;
+    display: flex;
+    align-items: center;
+    margin: 0 0 20px 80px;
+    justify-content: flex-start;
+}
+
+.statistical-label {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.statistical-input-item {
+    padding: 5px 8px;
+    font-size: 16px;
+}
+
+.statistical-input-search {
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 1px 12px;
+    border-radius: 2px;
+    background: rgba(70, 239, 239, 0.6);
+}
+
+.statistical-input-search:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.statistics-content {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}

@@ -1,0 +1,247 @@
+* {
+    box-sizing: border-box;
+}
+
+.all-order {
+    height: 100%;
+    box-sizing: none;
+    margin-left: 6px;
+    background: white;
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+}
+
+.layout__content-main .orderAdmin {
+    margin-top: 0;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.orderAdmin > span {
+    display: flex;
+    padding: 1rem;
+    font-size: 20px;
+    font-weight: 600;
+    color: #6b6b6b;
+}
+
+.info-order-item {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 0;
+    color: #1890ff;
+}
+
+.order-list {
+    display: flex;
+}
+
+.order-list-items {
+    flex: 4;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.order-items-item {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.order-deltail {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-items-item .qty,
+.order-items-item .name,
+.order-items-item .price {
+    font-size: 13px;
+    text-align: left;
+    color: #6b6b6b;
+    margin-bottom: 4px;
+}
+
+.order-list-items img {
+    width: 100px;
+    height: 100px;
+}
+
+/* --------------------------- */
+.order-infos {
+    flex: 5;
+    display: flex;
+    font-size: 15px;
+    margin-top: 5px;
+    flex-direction: column;
+}
+
+.order-info {
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.order-info-price {
+    font-weight: 700;
+    display: flex;
+}
+
+.order-info-address {
+    text-align: left;
+}
+
+.order-info-address b {
+    color: #6b6b6b;
+}
+
+.order-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 42px;
+}
+
+.order-button {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.order-button button {
+    padding: 4px 6px;
+    margin-left: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.order-button .shipping {
+    background: #1890ff;
+    color: white;
+}
+
+.order-button .paid {
+    background: #1890ff;
+    color: white;
+}
+
+.order-button .delete {
+    background: #d70018;
+    color: white;
+}
+
+.order-status {
+    display: flex;
+    color: #1890ff;
+}
+
+.order-status .confirm {
+    margin-left: 10px;
+}
+
+.order-menu {
+    display: flex;
+    padding: 0rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.order-menu a {
+    position: relative;
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    color: #1890ff;
+    background: white;
+    border: 1px solid #1890ff;
+}
+
+.order-menu a:hover {
+    color: white;
+    background: #1890ff;
+    transition: 0.3s;
+}
+
+.order-pendding-new,
+.order-shipping-new {
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    background: #1890ff;
+    color: white;
+}
+
+.order-payment-check {
+    font-size: 15px;
+    color: #6b6b6b;
+    display: flex;
+}
+
+/* Order Detail */
+.info-customer-wrapper {
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.info-customer-order {
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+.info-customer-title {
+    color: #3d98ec;
+    font-weight: 600;
+    text-align: center;
+}
+
+.ant-modal {
+    width: 800px !important;
+}
+
+.ant-modal-body {
+    padding: 10px 25px;
+}
+
+.ant-modal-header {
+    background: #ebebeb;
+}
+
+.ant-modal-title {
+    font-size: 18px;
+}
+
+.table-order-list {
+    margin-top: 12px;
+}
+
+.table-order-list th,
+.table-order-list td {
+    font-size: 15px;
+}
+
+.customer-total-price {
+    color: #3d98ec;
+    font-size: 18px;
+}
+
+table > .table-tbody-order {
+    overflow-y: auto;
+    height: 20px;
+}
+
+.customer-payment-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.customer-payment-action .paid-customer {
+    font-size: 14px;
+}

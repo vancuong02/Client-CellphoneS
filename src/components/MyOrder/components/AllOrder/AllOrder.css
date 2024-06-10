@@ -1,0 +1,61 @@
+.all-myorder {
+    margin-top: 1rem;
+}
+.all-myorder-parent-item {
+    padding: 12px 20px;
+    background-color: #fff;
+    margin-bottom: 8px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+        rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.all-myorder-item {
+    display: flex;
+    padding: 12px 0;
+    border-bottom: 1px solid #e4e4e4;
+}
+.all-myorder-item-name {
+    flex-grow: 1;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.all-myorder-item-name {
+    padding-left: 1rem;
+}
+
+.all-myorder-item-name p {
+    margin-bottom: 0;
+}
+
+.all-myorder-item-price {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.all-myorder-item-img img {
+    width: 86px;
+}
+.all-myorder-item-totalprice {
+    margin-top: 6px;
+    text-align: right;
+}
+.all-myorder-item-totalprice span {
+    font-weight: 500;
+    font-size: 16px;
+}
+.all-myorder-item-totalprice strong {
+    font-size: 16px;
+    color: #d70018;
+}
+
+.myorder-cancel {
+    margin-top: 4px;
+    font-size: 14px;
+    color: #d70018;
+    font-style: italic;
+    font-weight: 500;
+}

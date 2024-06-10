@@ -1,0 +1,125 @@
+/* SideNav */
+.sidenav-element {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.sidenav-account {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.sidenav-avater {
+    border-radius: 50%;
+    border: 1px solid #333;
+    margin-right: 16px;
+}
+
+.sidenav-edit {
+    display: flex;
+    color: #767676;
+    flex-direction: column;
+}
+
+.sidenav-name {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.sidenav-sub {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    font-size: 16px;
+    margin-left: 40px;
+}
+
+.sidenav-edit span {
+    color: #333;
+}
+
+.sidenav-edit a {
+    color: #a0a0a0;
+}
+
+.sidenav-sub a {
+    color: #333;
+}
+
+.activeSidenav {
+    color: #1890ff !important;
+}
+/* -------------------------------------- */
+.profile-container {
+    padding: 28px;
+}
+
+.profile-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 22px;
+}
+
+.profile-heading {
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.profile-des {
+    font-size: 14px;
+}
+
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.profile-control {
+    position: relative;
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.profile-control > label {
+    width: 140px;
+    display: block;
+}
+
+.profile-input {
+    width: 420px;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+}
+
+.profile-email {
+    width: 420px;
+    text-align: left;
+}
+
+.btn-save-profile {
+    cursor: pointer;
+    background: #e63838;
+    padding: 6px 20px;
+    border-radius: 4px;
+    color: #fff;
+    border: none;
+    margin-left: 120px;
+}
+
+.eys-pass {
+    position: absolute;
+    right: 6px;
+}

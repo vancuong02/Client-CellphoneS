@@ -1,0 +1,62 @@
+.list-product-like {
+    width: 32%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #f1efef;
+    background-color: #fff;
+    padding: 16px 16px 0 16px;
+}
+
+.product-like-img {
+    width: 200px;
+}
+
+.product-like-name {
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 6px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-like-price {
+    display: flex;
+    justify-content: space-around;
+}
+
+.price-like-sale {
+    color: rgb(241, 9, 9);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.price-like-default {
+    color: #9a9898;
+    text-decoration: line-through;
+}
+
+.product-like-buy {
+    color: #fff;
+    padding: 6px 0;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 18px;
+    margin: 10px 0;
+    background: rgb(241, 9, 9);
+}
+
+.product-like-interact {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    justify-content: space-between;
+}
+
+.product-like-icon-heart {
+    cursor: pointer;
+    font-size: 20px;
+}
