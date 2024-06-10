@@ -15,10 +15,17 @@ export const axiosClient = axios.create({
     },
 });
 
+<<<<<<< HEAD
 axiosClient.interceptors.response.use(
     (response) => {
         if (response && response.data) {
             return response.data;
+=======
+axiosClient.interceptors.response?.use(
+    (response) => {
+        if (response && response?.data) {
+            return response?.data;
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
         }
         return response;
     },

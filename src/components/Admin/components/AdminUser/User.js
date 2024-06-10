@@ -22,8 +22,11 @@ function User(props) {
             <td>{number + 1}</td>
             <td>{user.name}</td>
             <td>{user.email}</td>
+<<<<<<< HEAD
             <td>{user.phone}</td>
             <td>{user.address}</td>
+=======
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
             <td className="delete-user" onClick={() => handleDeleteUser(user)}>
                 <DeleteOutlined />
             </td>

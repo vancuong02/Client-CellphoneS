@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import axios from "axios";
 import { Rate, message } from "antd";
 import { useDispatch, useSelector } from "react-redux";
@@ -6,13 +7,26 @@ import { HeartOutlined } from "@ant-design/icons";
 
 import { formatPrice } from "../../untils/index";
 import { AddToCart } from "../../actions/CartAction";
+=======
+/* eslint-disable jsx-a11y/alt-text */
+import React from "react";
+import { formatPrice } from "../../untils/index";
+import { AddToCart } from "../../actions/CartAction";
+import { useDispatch } from "react-redux";
+import { message } from "antd";
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 
 function Product(props) {
     const { product } = props;
     const dispatch = useDispatch();
+<<<<<<< HEAD
     var userInfo = useSelector((state) => state.userSignin.userInfo);
 
     const success = useCallback(() => {
+=======
+
+    const success = () => {
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
         message.success({
             content: "Thêm vào giỏ hàng thành công",
             duration: 1,
@@ -23,6 +37,7 @@ function Product(props) {
                 top: "4rem",
             },
         });
+<<<<<<< HEAD
     }, []);
 
     const error = useCallback(() => {
@@ -99,6 +114,18 @@ function Product(props) {
         <div className="hotsale-listproduct-product">
             <a href={"/detail/" + product._id}>
                 <img src={product.image} alt=""></img>
+=======
+    };
+    const AddProductToCart = (product) => {
+        const action = AddToCart(product);
+        dispatch(action);
+        success();
+    };
+    return (
+        <div className="hotsale-listproduct-product">
+            <a href={"/detail/" + product._id}>
+                <img src={product.image}></img>
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
                 <p className="hotsale-listproduct-product-name">
                     {product.name}
                 </p>
@@ -115,6 +142,7 @@ function Product(props) {
                 <p>{product.percentDiscount}%</p>
             </div>
             <div className="buy" onClick={() => AddProductToCart(product)}>
+<<<<<<< HEAD
                 Thêm vào giỏ hàng
             </div>
             <div className="interact-product-element">
@@ -123,6 +151,9 @@ function Product(props) {
                     onClick={() => handleHeartClick(product)}
                     className="product-heart-icon"
                 />
+=======
+                Mua Ngay
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
             </div>
         </div>
     );

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Col } from "antd";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
@@ -25,6 +26,37 @@ function AllComment({ allComment }) {
     };
 
     const handleRepComment = () => {
+=======
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/alt-text */
+import { Col } from "antd";
+import React, { useState } from "react";
+import { useParams } from "react-router-dom";
+import {
+    WechatOutlined,
+    PushpinOutlined,
+    LockOutlined,
+} from "@ant-design/icons";
+import { useDispatch, useSelector } from "react-redux";
+import {
+    pinCommentProduct,
+    repCommentProduct,
+} from "../../actions/ProductAction";
+import AllRepComment from "./AllRepComment";
+import { getFirstCharacterUser } from "../../untils";
+
+function AllComment(props) {
+    const { id } = useParams();
+    const { allComment } = props;
+    const dispatch = useDispatch();
+    const [repCmt, setRepCmt] = useState({ key: "", status: false });
+    const { userInfo } = useSelector((state) => state.userSignin);
+    const [repValue, setRepValue] = useState("");
+    const showRepComment = (id) => {
+        setRepCmt({ key: id, status: !repCmt.status });
+    };
+    const handleRepComment = (value) => {
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
         if (userInfo) {
             const comment = {
                 idComment: repCmt.key,
@@ -35,10 +67,19 @@ function AllComment({ allComment }) {
             dispatch(repCommentProduct(id, comment));
             setRepValue("");
             setRepCmt({ key: "", status: false });
+<<<<<<< HEAD
         } else {
             setRepValue("");
             alert("Đăng nhập để bình luận");
         }
+=======
+        } else alert("Vui lòng đănd nhập");
+    };
+
+    const PinComment = (comment) => {
+        const UpdateComment = { ...comment, status: "pin" };
+        dispatch(pinCommentProduct(id, UpdateComment));
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
     };
 
     return (
@@ -54,12 +95,18 @@ function AllComment({ allComment }) {
                     >
                         <div className="all-comment-info">
                             <div style={{ display: "flex" }}>
+<<<<<<< HEAD
                                 {comment?.isAdmin ? (
                                     <div className="all-comment-info-name admin">
                                         <img
                                             alt=""
                                             src="https://cellphones.com.vn/skin/frontend/default/cpsdesktop/images/media/logo.png"
                                         ></img>
+=======
+                                {comment.isAdmin ? (
+                                    <div className="all-comment-info-name admin">
+                                        <img src="https://cellphones.com.vn/skin/frontend/default/cpsdesktop/images/media/logo.png"></img>
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
                                     </div>
                                 ) : (
                                     <div className="all-comment-info-name">
@@ -74,18 +121,54 @@ function AllComment({ allComment }) {
                                     <strong>{comment.author}</strong>
                                 )}
                             </div>
+<<<<<<< HEAD
+=======
+
+                            {userInfo.isAdmin ? (
+                                <div className="comment-status">
+                                    <div
+                                        className="comment-status-pin"
+                                        onClick={() => PinComment(comment)}
+                                    >
+                                        {comment.status === "pin" ? (
+                                            <LockOutlined></LockOutlined>
+                                        ) : (
+                                            <PushpinOutlined></PushpinOutlined>
+                                        )}
+                                    </div>
+                                </div>
+                            ) : (
+                                <div className="comment-status">
+                                    <div className="comment-status-pin">
+                                        {comment.status === "pin" ? (
+                                            <PushpinOutlined></PushpinOutlined>
+                                        ) : (
+                                            ""
+                                        )}
+                                    </div>
+                                </div>
+                            )}
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
                         </div>
                         <div className="all-comment-content">
                             {comment.content}
                         </div>
                         <div className="all-comment-more">
+<<<<<<< HEAD
                             <div
+=======
+                            <a
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
                                 className="all-comment-more-chat"
                                 onClick={() => showRepComment(comment._id)}
                             >
                                 <WechatOutlined style={{ color: "#e11b1e" }} />{" "}
                                 <p> Trả lời</p>
+<<<<<<< HEAD
                             </div>
+=======
+                            </a>
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
                         </div>
                         {comment.replies.length > 0 ? (
                             <AllRepComment

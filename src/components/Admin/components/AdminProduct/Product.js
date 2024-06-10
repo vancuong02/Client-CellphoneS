@@ -1,13 +1,24 @@
+<<<<<<< HEAD
 import { message } from "antd";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { DeleteOutlined, EditOutlined, FormOutlined } from "@ant-design/icons";
 
+=======
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 import {
     DeleteProduct,
     paginationProduct,
 } from "../../../../actions/ProductAction";
+<<<<<<< HEAD
 import { formatPrice } from "../../../../untils/index";
+=======
+import { Link } from "react-router-dom";
+import { formatPrice } from "../../../../untils/index";
+import { DeleteOutlined, EditOutlined, FormOutlined } from "@ant-design/icons";
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 
 function Product(props) {
     const { product, number } = props;
@@ -15,6 +26,7 @@ function Product(props) {
     const currentPage = useSelector((state) => state.allProduct.currentPage);
 
     const handleDeleteProduct = async (product) => {
+<<<<<<< HEAD
         // eslint-disable-next-line no-restricted-globals
         const confirmDel = confirm(
             `Bạn có chắc chắn muốn xóa ${product.name} hay không?`
@@ -24,6 +36,10 @@ function Product(props) {
             dispatch(paginationProduct(currentPage));
             message.success("Xóa sản phẩm thành công");
         }
+=======
+        await dispatch(DeleteProduct(product._id));
+        dispatch(paginationProduct(currentPage));
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
     };
 
     return (

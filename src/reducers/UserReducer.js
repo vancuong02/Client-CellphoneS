@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {
     FORGOT_PASSWORD_REQUEST,
     FORGOT_PASSWORD_SUCCESS,
@@ -7,6 +8,8 @@ import {
     RESET_PASSWORD_FAIL,
 } from "../constants/UserConstant";
 
+=======
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 export const UserSigninReducer = (state = {}, action) => {
     switch (action.type) {
         case "USER_LOGIN_SUCCESS":
@@ -22,8 +25,11 @@ export const UserSignupReducer = (state = {}, action) => {
     switch (action.type) {
         case "USER_SIGNUP_SUCCESS":
             return { ...state, userInfo: action.payload };
+<<<<<<< HEAD
         case "USER_SIGNUP_FAIL":
             return { ...state, error: action.payload };
+=======
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
         default:
             return state;
     }
@@ -38,12 +44,17 @@ export const UserSignoutReducer = (state = {}, action) => {
     }
 };
 
+<<<<<<< HEAD
 export const userReducer = (state = {}, action) => {
+=======
+export const getAllUserReducer = (state = {}, action) => {
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
     switch (action.type) {
         case "GET_ALL_USER": {
             return { ...state, user: action.payload };
         }
 
+<<<<<<< HEAD
         case "GET_USER_BY_ID_SUCCESS": {
             return { ...state, user: action.payload, error: null };
         }
@@ -60,6 +71,8 @@ export const userReducer = (state = {}, action) => {
             return { ...state, error: action.payload };
         }
 
+=======
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
         case "DELETE_USER": {
             return { ...state };
         }
@@ -68,6 +81,7 @@ export const userReducer = (state = {}, action) => {
             return state;
     }
 };
+<<<<<<< HEAD
 
 export const forgotPasswordReducer = (
     state = { loading: false, success: false, error: null },
@@ -100,3 +114,5 @@ export const resetPasswordReducer = (
             return state;
     }
 };
+=======
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41

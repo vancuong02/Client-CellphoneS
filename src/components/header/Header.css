@@ -87,7 +87,10 @@
 
 .search {
     flex-grow: 1;
+<<<<<<< HEAD
     margin-left: 12px;
+=======
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 }
 
 .search form {
@@ -95,11 +98,18 @@
 }
 
 .search form input {
+<<<<<<< HEAD
     padding: 0.5rem 1rem;
     outline: none;
     border: none;
     width: 100%;
     border-radius: 4px;
+=======
+    padding: 0.3rem 1rem;
+    outline: none;
+    border: none;
+    width: 100%;
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 }
 
 .search form span {

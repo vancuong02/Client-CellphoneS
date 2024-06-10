@@ -41,6 +41,17 @@ export const getAllProductReducer = (state = initialState, action) => {
 
         case "FILTER_PRODUCT_BY_RANDOM_FIELD": {
             return { ...state, product: action.payload };
+<<<<<<< HEAD
+=======
+            // let newList = [...state.product]
+            // for(var key in action.payload) {
+            //     var value = action.payload[key];
+
+            //     newList = newList.filter(item => item[key] === value)
+            // }
+
+            // return {...state, product: newList}
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
         }
 
         case "SAVE_PRODUCT": {
@@ -66,9 +77,12 @@ export const getAllProductReducer = (state = initialState, action) => {
         case "PAGINATION_PRODUCT":
             return { ...state, product: action.payload };
 
+<<<<<<< HEAD
         case "PAGINATION_ALL_PRODUCT":
             return { ...state, product: action.payload };
 
+=======
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
         default:
             return state;
     }

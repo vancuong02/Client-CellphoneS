@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+/* eslint-disable jsx-a11y/alt-text */
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 import { Dropdown } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 import React, { useEffect, useState } from "react";
@@ -87,9 +91,14 @@ export default function FilterMenu() {
         setDataFilter(newDataFilter);
     };
 
+<<<<<<< HEAD
     const MenuFirmProduct = (item, index) => (
         <div
             key={index}
+=======
+    const MenuFirmProduct = (item) => (
+        <div
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
             className={
                 dataFilter[`type`] === item.name
                     ? `filter-menu-firm-item active`
@@ -97,7 +106,11 @@ export default function FilterMenu() {
             }
             onClick={() => HandleFilterProductByType(item.name)}
         >
+<<<<<<< HEAD
             <img src={item.img} alt="a"></img>
+=======
+            <img src={item.img}></img>
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
         </div>
     );
 
@@ -114,9 +127,13 @@ export default function FilterMenu() {
     return (
         <div>
             <div className="filter-menu-firm">
+<<<<<<< HEAD
                 {List
                     ? List.map((item, index) => MenuFirmProduct(item, index))
                     : ""}
+=======
+                {List ? List.map((item) => MenuFirmProduct(item)) : ""}
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
             </div>
 
             <div className="filter-menu">

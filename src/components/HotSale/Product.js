@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
+<<<<<<< HEAD
 import React, { useCallback, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AddToCart } from "../../actions/CartAction";
@@ -8,16 +9,32 @@ import { Rate, message } from "antd";
 import { HeartOutlined } from "@ant-design/icons";
 import axios from "axios";
 import "./Sale.css";
+=======
+import React from "react";
+import { useDispatch } from "react-redux";
+import { AddToCart } from "../../actions/CartAction";
+import { Link } from "react-router-dom";
+import { formatPrice } from "../../untils/index";
+import { message } from "antd";
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 
 function Product(props) {
     const { product } = props;
     const dispatch = useDispatch();
+<<<<<<< HEAD
     var userInfo = useSelector((state) => state.userSignin.userInfo);
 
     const success = useCallback(() => {
         message.success({
             content: "Thêm vào giỏ hàng thành công",
             duration: 1.5,
+=======
+
+    const success = () => {
+        message.success({
+            content: "Thêm vào giỏ hàng thành công",
+            duration: 1,
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
             className: "custom-class",
             style: {
                 position: "absolute",
@@ -25,6 +42,7 @@ function Product(props) {
                 top: "4rem",
             },
         });
+<<<<<<< HEAD
     }, []);
 
     const error = useCallback((text) => {
@@ -95,6 +113,14 @@ function Product(props) {
         } catch (error) {
             console.error("Error updating product:", error);
         }
+=======
+    };
+
+    const AddProductToCart = (product) => {
+        const action = AddToCart(product);
+        dispatch(action);
+        success();
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
     };
 
     return (
@@ -106,18 +132,30 @@ function Product(props) {
                 </p>
                 <div className="price">
                     <span className="price1">
+<<<<<<< HEAD
                         đ{formatPrice(product.salePrice)}
                     </span>
                     <span className="price2">
                         đ{formatPrice(product.price)}
+=======
+                        {formatPrice(product.salePrice)}đ
+                    </span>
+                    <span className="price2">
+                        {formatPrice(product.price)}đ
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
                     </span>
                 </div>
             </Link>
             {product.percentDiscount >= 5 ? (
+<<<<<<< HEAD
                 <div className="product-price-percent">
                     <span className="product-percent-detail">
                         Giảm&nbsp;{product.percentDiscount}%
                     </span>
+=======
+                <div className="discount">
+                    <p>{product.percentDiscount}%</p>
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
                 </div>
             ) : (
                 ""
@@ -128,6 +166,7 @@ function Product(props) {
                     AddProductToCart(product);
                 }}
             >
+<<<<<<< HEAD
                 Thêm vào giỏ hàng
             </div>
             <div className="interact-product-element">
@@ -136,6 +175,9 @@ function Product(props) {
                     onClick={() => handleHeartClick(product)}
                     className="product-heart-icon"
                 />
+=======
+                Mua Ngay
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
             </div>
         </div>
     );

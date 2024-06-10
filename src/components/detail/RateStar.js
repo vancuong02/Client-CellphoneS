@@ -272,7 +272,11 @@ function RateStar(props) {
                                                 userInfo
                                                     ? setShowRate(true)
                                                     : alert(
+<<<<<<< HEAD
                                                           "Đăng nhập để đánh giá sản phẩm"
+=======
+                                                          "Đăng nhập đi bạn eii"
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
                                                       );
                                             }}
                                         >

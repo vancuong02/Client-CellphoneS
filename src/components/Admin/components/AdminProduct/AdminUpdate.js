@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
+=======
+import React, { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 import { useSelector, useDispatch } from "react-redux";
 import {
     getproductById,
@@ -8,20 +13,33 @@ import {
 } from "../../../../actions/ProductAction";
 import { useHistory, useParams } from "react-router-dom";
 import { getAllSelectList } from "../../../../actions/SelectListAction";
+<<<<<<< HEAD
 import { message } from "antd";
 
 function AdminUpdate() {
     const [image, setImage] = useState("");
     const [activeTypeProduct, setActiveTypeproduct] = useState(undefined);
 
+=======
+
+function AdminUpdate(props) {
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
     const { register, handleSubmit } = useForm();
     const { id } = useParams();
     const dispatch = useDispatch();
     const history = useHistory();
 
+<<<<<<< HEAD
     const { List } = useSelector((state) => state.allTypeProduct);
     const SelectList = useSelector((state) => state.selectList.List);
     const detailProduct = useSelector((state) => state.getProductById.product);
+=======
+    const [image, setImage] = useState("");
+    const detailProduct = useSelector((state) => state.getProductById.product);
+    const SelectList = useSelector((state) => state.selectList.List);
+    const [activeTypeProduct, setActiveTypeproduct] = useState(undefined);
+    const { List } = useSelector((state) => state.allTypeProduct);
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 
     useEffect(() => {
         dispatch(getproductById(id));
@@ -46,8 +64,11 @@ function AdminUpdate() {
     const onSubmit = async (data) => {
         let formData = new FormData();
 
+<<<<<<< HEAD
         formData.append("_id", id);
         formData.append("image", image);
+=======
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
         formData.append("name", data.name);
         formData.append("price", data.price);
         formData.append("quantity", data.quantity);
@@ -56,6 +77,7 @@ function AdminUpdate() {
             "type",
             activeTypeProduct ? activeTypeProduct : detailProduct.type
         );
+<<<<<<< HEAD
 
         await dispatch(saveProduct(formData));
 
@@ -67,6 +89,26 @@ function AdminUpdate() {
     const MenuFirmProduct = (item, index) => (
         <div
             key={index}
+=======
+        formData.append("image", image);
+        formData.append("_id", id);
+
+        formData.append("os", data.os);
+        formData.append("ram", data.ram);
+        formData.append("battery", data.battery);
+        formData.append("rom", data.rom);
+        formData.append("camera", data.camera);
+        formData.append("special", data.special);
+        formData.append("design", data.design);
+        formData.append("screen", data.screen);
+
+        await dispatch(saveProduct(formData));
+        history.push("/admin/product");
+    };
+
+    const MenuFirmProduct = (item) => (
+        <div
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
             className={
                 activeTypeProduct
                     ? activeTypeProduct === item.name
@@ -120,11 +162,15 @@ function AdminUpdate() {
                     ></input>
 
                     <div className="filter-menu-firm">
+<<<<<<< HEAD
                         {List
                             ? List.map((item, index) =>
                                   MenuFirmProduct(item, index)
                               )
                             : ""}
+=======
+                        {List ? List.map((item) => MenuFirmProduct(item)) : ""}
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
                     </div>
 
                     {SelectList && SelectList.length > 0

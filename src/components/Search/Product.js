@@ -48,9 +48,13 @@ function Product(props) {
                 <p>{product.percentDiscount}%</p>
             </div>
             <div className="buy-product">
+<<<<<<< HEAD
                 <span onClick={() => AddProductToCart(product)}>
                     Thêm vào giỏ hàng
                 </span>
+=======
+                <span onClick={() => AddProductToCart(product)}>Mua Ngay</span>
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
             </div>
         </div>
     );

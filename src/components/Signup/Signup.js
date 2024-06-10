@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+<<<<<<< HEAD
 import { useDispatch, useSelector } from "react-redux";
 import { EyeInvisibleOutlined, EyeOutlined } from "@ant-design/icons";
 
@@ -15,6 +16,15 @@ function Signup() {
     const dispatch = useDispatch();
     const userSignup = useSelector((state) => state.userSignup);
     const { error } = userSignup;
+=======
+import { useDispatch } from "react-redux";
+import { SignupUser } from "../../actions/UserAction";
+
+import "./Signup.css";
+
+function Login() {
+    const dispatch = useDispatch();
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 
     const {
         register,
@@ -27,10 +37,13 @@ function Signup() {
         dispatch(SignupUser(data));
     };
 
+<<<<<<< HEAD
     if (error) {
         message.error(error);
     }
 
+=======
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
     return (
         <div className="login-form w3_form">
             <Link to="/" className="back">
@@ -76,6 +89,7 @@ function Signup() {
                                 {errors.email?.message}
                             </p>
                         )}
+<<<<<<< HEAD
                         <div className="input-authentication-pass">
                             <input
                                 type={showPass ? "text" : "password"}
@@ -96,11 +110,22 @@ function Signup() {
                                 )}
                             </div>
                         </div>
+=======
+                        <input
+                            type="password"
+                            autoComplete="on"
+                            placeholder="Password"
+                            {...register("password", {
+                                required: "Mật khẩu là bắt buộc",
+                            })}
+                        />
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
                         {errors.password && (
                             <p className="error-message">
                                 {errors.password?.message}
                             </p>
                         )}
+<<<<<<< HEAD
                         <div className="input-authentication-pass">
                             <input
                                 type={showConfirmPass ? "text" : "password"}
@@ -126,6 +151,19 @@ function Signup() {
                                 )}
                             </div>
                         </div>
+=======
+                        <input
+                            type="password"
+                            autoComplete="on"
+                            placeholder="Confirm Password"
+                            {...register("repeatPassword", {
+                                required: "Nhập lại mật khẩu là bắt buộc",
+                                validate: (value) =>
+                                    value === getValues("password") ||
+                                    "Nhập lại mật khẩu không khớp",
+                            })}
+                        />
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
                         {errors.repeatPassword && (
                             <p className="error-message">
                                 {errors.repeatPassword?.message}
@@ -144,4 +182,8 @@ function Signup() {
     );
 }
 
+<<<<<<< HEAD
 export default Signup;
+=======
+export default Login;
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41

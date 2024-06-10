@@ -8,7 +8,10 @@ import { getAllProduct } from "../../actions/ProductAction";
 
 import FilterProduct from "./FilterProduct";
 import SortByPrice from "./SortByPrice/SortByPrice";
+<<<<<<< HEAD
 import FilterMenu from "./FilterMenu/FilterMenu";
+=======
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 
 function AllProduct(props) {
     const dispatch = useDispatch();
@@ -27,11 +30,16 @@ function AllProduct(props) {
         <section id="hotsale iphone">
             <div className="hotsale">
                 <div className="search-product">
+<<<<<<< HEAD
                     <FilterMenu></FilterMenu>
                     <div style={{ display: "flex" }}>
                         <SortByPrice></SortByPrice>
                         <FilterProduct></FilterProduct>
                     </div>
+=======
+                    <SortByPrice></SortByPrice>
+                    <FilterProduct></FilterProduct>
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
                 </div>
                 {product && product.length > 0 ? (
                     <ListProduct

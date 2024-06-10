@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import AllComment from "./AllComment";
 import { commentProduct, getproductById } from "../../actions/ProductAction";
 
+<<<<<<< HEAD
 function CommentProduct() {
     const { id } = useParams();
     const dispatch = useDispatch();
@@ -13,6 +14,18 @@ function CommentProduct() {
     const allComment = useSelector(
         (state) => state.getProductById.product.comments
     );
+=======
+function CommentProduct(props) {
+    const [value, setValue] = useState("");
+
+    const { id } = useParams();
+    const dispatch = useDispatch();
+
+    const allComment = useSelector(
+        (state) => state.getProductById.product.comments
+    );
+
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
     const { userInfo } = useSelector((state) => state.userSignin);
 
     const Comment = () => {
@@ -25,12 +38,17 @@ function CommentProduct() {
             };
             dispatch(commentProduct(id, comment));
             setValue("");
+<<<<<<< HEAD
         } else {
             setValue("");
             alert("Đăng nhập để bình luận");
         }
     };
 
+=======
+        } else alert("Vui lòng đăng nhập");
+    };
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
     useEffect(() => {
         dispatch(getproductById(id));
     }, [dispatch, id]);

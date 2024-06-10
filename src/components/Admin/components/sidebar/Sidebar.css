@@ -1,11 +1,20 @@
+<<<<<<< HEAD
 .sidebar {
+=======
+.sidebar{
+   
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
     min-width: 300px;
     height: 100vh;
     position: fixed;
     left: 0;
     top: 0;
 }
+<<<<<<< HEAD
 .sidebar-top {
+=======
+.sidebar-top{
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
     color: #1890ff;
     font-size: 30px;
     font-weight: 600;
@@ -15,6 +24,7 @@
     justify-content: center;
     align-items: center;
 }
+<<<<<<< HEAD
 .sidebar-top img {
     width: 200px;
 }
@@ -22,6 +32,15 @@
     padding: 0 1rem;
 }
 .sidebar-list-item {
+=======
+.sidebar-top img{
+    width: 200px;
+}
+.sidebar-list{
+    padding: 0 1rem;
+}
+.sidebar-list-item{
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
     position: relative;
     display: flex;
     align-items: center;
@@ -32,6 +51,7 @@
     border-radius: 18px;
     color: #6b6b6b;
 }
+<<<<<<< HEAD
 .sidebar-list-item.active {
     background: #1890ff;
     color: white;
@@ -47,6 +67,23 @@
 }
 
 .admin-order-new {
+=======
+.sidebar-list-item.active{
+    background: #1890ff;
+    color: white;
+}
+.sidebar-list-item p{
+   margin:0 0 0 1rem;
+}
+
+.sidebar-list-item:hover{
+    background: #1890ff;
+    color: white;
+    transition: .3s;
+}
+
+.admin-order-new{
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
     position: absolute;
     top: 0px;
     right: -10px;
@@ -56,6 +93,10 @@
     border-radius: 50%;
     line-height: 30px;
     text-align: center;
+<<<<<<< HEAD
+=======
+
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
     background: #1890ff;
     color: white;
     font-size: 13px;

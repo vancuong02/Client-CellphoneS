@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import "./App.css";
@@ -21,6 +22,24 @@ import ChangePassword from "./components/User/pages/ChangePassword";
 import LikedProductsMe from "./components/User/pages/LikedProductsMe";
 import ForgotPassword from "./pages/ForgotPasswordPage";
 import ResetPassword from "./pages/ResetPasswordPage";
+=======
+import "./App.css";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
+import SignupPage from "./pages/SignupPage";
+import ProductPage from "./pages/ProductPage";
+import DetailPage from "./pages/DetailPage";
+import CartPage from "./pages/CartPage";
+import OrderPage from "./pages/OrderPage";
+import SearchPage from "./pages/SearchPage";
+import AdminPage from "./pages/AdminPage";
+import ResetScroll from "./components/ResetScroll/ResetScroll";
+import MyOrderPage from "./pages/MyOrderPage";
+import PaymentPage from "./pages/PaymentPage";
+import Chatbox from "./Chatbox";
+import OrderSuccessPage from "./pages/OrderSuccessPage";
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 
 function App() {
     return (
@@ -34,6 +53,7 @@ function App() {
                 <Route path="/login">
                     <LoginPage></LoginPage>
                 </Route>
+<<<<<<< HEAD
                 <Route path="/forgot-password">
                     <ForgotPassword></ForgotPassword>
                 </Route>
@@ -41,6 +61,8 @@ function App() {
                     <ResetPassword></ResetPassword>
                 </Route>
 
+=======
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
                 <Route path="/register">
                     <SignupPage></SignupPage>
                 </Route>
@@ -77,6 +99,7 @@ function App() {
                     <AdminPage></AdminPage>
                 </Route>
 
+<<<<<<< HEAD
                 <Route path="/user/profile">
                     <UserPage>
                         <Profile />
@@ -99,6 +122,13 @@ function App() {
                     <NotFoundPage />
                 </Route> */}
             </Router>
+=======
+                {/* <Route path="*">
+                    <HomePage></HomePage>
+                </Route> */}
+            </Router>
+            <Chatbox />
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
         </div>
     );
 }

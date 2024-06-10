@@ -34,15 +34,21 @@ table td {
     font-size: 16px;
     text-align: center;
 }
+<<<<<<< HEAD
 
 tr .edit-user,
+=======
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 tr .delete-user {
     display: flex;
     cursor: pointer;
     padding: 0;
 }
+<<<<<<< HEAD
 
 tr .edit-user span,
+=======
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 tr .delete-user span {
     margin: 0 auto;
 }
@@ -50,7 +56,10 @@ tr .delete-user span {
 tr .delete-user:hover span {
     color: #f30707;
 }
+<<<<<<< HEAD
 
 .edit-user:hover span {
     color: rgb(24, 162, 236);
 }
+=======
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41

@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 #orElement {
     background-color: #f6f6f6;
     width: 100wh;
@@ -81,6 +82,36 @@
     width: 100%;
 }
 
+=======
+#order {
+    margin-top: 100px;
+}
+
+.order-content {
+    max-width: 600px;
+    width: 600px;
+    background: #eee;
+    z-index: 9999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin-top: 1rem;
+}
+
+.order-page {
+    max-width: 600px;
+    width: 600px;
+    background: #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.customer,
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 .choose-pay {
     width: 100%;
     margin-top: 1rem;
@@ -91,7 +122,11 @@
     margin-top: 0.5rem;
 }
 
+<<<<<<< HEAD
 .order-form h4 {
+=======
+.order-page h4 {
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
     text-align: left;
     padding-left: 0.5rem;
     margin: 0;
@@ -117,7 +152,11 @@
     display: flex;
 }
 
+<<<<<<< HEAD
 .order-form input,
+=======
+.order-page input,
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 textarea {
     width: 100%;
     outline: none;
@@ -309,6 +348,10 @@ textarea {
     height: 100px;
     border-radius: 50%;
     border: 3px solid limegreen;
+<<<<<<< HEAD
+=======
+
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -346,9 +389,12 @@ textarea {
     margin: 0;
     font-size: 14px;
 }
+<<<<<<< HEAD
 
 .checkout-separate {
     margin: 14px 0;
     height: 1px;
     background: #d2d1d6;
 }
+=======
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41

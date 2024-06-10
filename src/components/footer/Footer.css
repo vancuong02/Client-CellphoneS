@@ -7,7 +7,10 @@
     margin: 0;
     width: 100%;
     background: #f0f0f0;
+<<<<<<< HEAD
     font-size: 14px;
+=======
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 }
 
 .footer {
@@ -54,7 +57,10 @@
     margin: 0;
 }
 
+<<<<<<< HEAD
 .footer-top-sp img,
+=======
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 .footer-top-about img {
     width: 200px;
     margin: 1rem 0;

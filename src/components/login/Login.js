@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { message } from "antd";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
@@ -12,6 +13,18 @@ import { EyeInvisibleOutlined, EyeOutlined } from "@ant-design/icons";
 function Login() {
     const [showPassword, setShowPassword] = useState(false);
 
+=======
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { useHistory } from "react-router";
+import { useSelector, useDispatch } from "react-redux";
+
+import "./Login.css";
+import { login } from "../../actions/UserAction";
+
+function Login() {
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
     const dispatch = useDispatch();
     const history = useHistory();
     const {
@@ -20,13 +33,19 @@ function Login() {
         formState: { errors },
     } = useForm();
 
+<<<<<<< HEAD
     const userSignin = useSelector((state) => state.userSignin);
     const { userInfo, error } = userSignin;
+=======
+    const user = useSelector((state) => state.userSignin);
+    const { userInfo } = user;
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 
     const onSubmit = (data) => {
         dispatch(login(data));
     };
 
+<<<<<<< HEAD
     if (error) {
         message.error(error);
     }
@@ -37,6 +56,13 @@ function Login() {
             dispatch(getUserById(userInfo._id));
         }
     }, [userInfo, history, dispatch]);
+=======
+    useEffect(() => {
+        if (userInfo) {
+            history.push("/");
+        }
+    });
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 
     return (
         <div className="login-form w3_form">
@@ -71,6 +97,7 @@ function Login() {
                                 {errors.email?.message}
                             </p>
                         )}
+<<<<<<< HEAD
                         <div className="input-authentication-pass">
                             <input
                                 autoComplete="on"
@@ -91,6 +118,16 @@ function Login() {
                                 )}
                             </div>
                         </div>
+=======
+                        <input
+                            type="password"
+                            autoComplete="on"
+                            placeholder="Password"
+                            {...register("password", {
+                                required: "Mật khẩu là bắt buộc",
+                            })}
+                        />
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
                         {errors.password && (
                             <p className="error-message">
                                 {errors.password?.message}
@@ -98,16 +135,58 @@ function Login() {
                         )}
                         <input type="submit" defaultValue="Submit" />
                     </form>
+<<<<<<< HEAD
+=======
+                    <div className="second-section w3_section">
+                        <div className="bottom-header w3_bottom">
+                            <h3>OR</h3>
+                        </div>
+                        <div className="social-links w3_social">
+                            <ul>
+                                <li>
+                                    <Link
+                                        className="facebook"
+                                        to="#"
+                                        target="blank"
+                                    >
+                                        <i className="fa-brands fa-facebook"></i>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link
+                                        className="twitter"
+                                        to="#"
+                                        target="blank"
+                                    >
+                                        <i className="fa-brands fa-twitter"></i>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link
+                                        className="googleplus"
+                                        to="#"
+                                        target="blank"
+                                    >
+                                        <i className="fa-brands fa-google"></i>
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
                     <div className="bottom-text w3_bottom_text">
                         <p>
                             Do not have an account?
                             <Link to="/register">Sign up</Link>
                         </p>
                     </div>
+<<<<<<< HEAD
                     <div className="bottom-text w3_bottom_text">
                         Forgot password?{" "}
                         <Link to="/forgot-password">Reset here</Link>
                     </div>
+=======
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
                 </div>
             </div>
         </div>

@@ -6,16 +6,26 @@ import {
     DollarCircleOutlined,
     FileTextOutlined,
 } from "@ant-design/icons";
+<<<<<<< HEAD
 import { useSelector } from "react-redux";
 
 import "./DashBoard.css";
 import ChartDashBoard from "./ChartDashBoard";
 import { formatPrice } from "../../../../untils";
+=======
+import "./DashBoard.css";
+import ChartDashBoard from "./ChartDashBoard";
+import { useSelector } from "react-redux";
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 
 export default function DashBoard() {
     // Tổng user
     const users = useSelector((state) => state?.users?.user);
     const quantityUsers = users?.length || "0";
+<<<<<<< HEAD
+=======
+    console.log(quantityUsers);
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 
     // Tổng sản phẩm
     const product = useSelector((state) => state?.allProduct?.product);
@@ -79,9 +89,13 @@ export default function DashBoard() {
                                     <DollarCircleOutlined></DollarCircleOutlined>
                                 </div>
                                 <div className="dashboard-middle-statistic-title">
+<<<<<<< HEAD
                                     <span className="total">
                                         {formatPrice(totalSales)}
                                     </span>
+=======
+                                    <span className="total">{totalSales}</span>
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
                                     <span className="title">Total Sales</span>
                                 </div>
                             </li>

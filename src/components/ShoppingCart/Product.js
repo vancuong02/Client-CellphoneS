@@ -1,12 +1,21 @@
+<<<<<<< HEAD
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+=======
+/* eslint-disable jsx-a11y/alt-text */
+import React from "react";
+import { useDispatch } from "react-redux";
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 import {
     AddToCart,
     DeleteToCart,
     DeleteQtyProduct,
 } from "../../actions/CartAction";
 import { formatPrice } from "../../untils/index";
+<<<<<<< HEAD
 import { getproductById } from "../../actions/ProductAction";
+=======
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 
 Product.propTypes = {};
 
@@ -14,18 +23,25 @@ function Product(props) {
     const { product } = props;
     const dispatch = useDispatch();
 
+<<<<<<< HEAD
     const productById = useSelector((state) => state.getProductById.product);
 
     useEffect(() => {
         dispatch(getproductById(product._id));
     }, [dispatch, product._id]);
 
+=======
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
     function handleDecrementProduct(product) {
         const action = DeleteToCart(product);
         if (product.qty === 1) {
             // eslint-disable-next-line no-restricted-globals
             const confirmDelete = confirm(
+<<<<<<< HEAD
                 `Bạn có chắc chắn muốn xóa ${product.name} khỏi giỏ hàng không không?`
+=======
+                "Bạn có chắc chắn muốn xóa sản phẩm này khỏi giỏ hàng không không?"
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
             );
             if (confirmDelete) {
                 dispatch(action);
@@ -36,18 +52,28 @@ function Product(props) {
     }
 
     function handlePlusProduct(product) {
+<<<<<<< HEAD
         if (product.qty >= productById.quantity) {
             alert("Số lượng mua vượt qúa giới hạn hiện có");
         } else {
             const action = AddToCart(product);
             dispatch(action);
         }
+=======
+        console.log(product);
+        const action = AddToCart(product);
+        dispatch(action);
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
     }
 
     function handleProductOut(product) {
         // eslint-disable-next-line no-restricted-globals
         const confirmDelete = confirm(
+<<<<<<< HEAD
             `Bạn có chắc chắn muốn xóa ${product.name} khỏi giỏ hàng không không?`
+=======
+            "Bạn có chắc chắn muốn xóa sản phẩm này khỏi giỏ hàng không không?"
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
         );
         if (confirmDelete) {
             const action = DeleteQtyProduct(product);
@@ -59,6 +85,7 @@ function Product(props) {
         <div className="shopping-cart-list-product">
             <div className="shopping-cart-list-product-block">
                 <div className="shopping-cart-list-product-block-left">
+<<<<<<< HEAD
                     <img src={product.image} alt="cart-image" aria-hidden></img>
                 </div>
                 <div className="shopping-cart-list-product-block-right">
@@ -99,6 +126,22 @@ function Product(props) {
                             ></path>
                         </svg>
                     </button>
+=======
+                    <img src={product.image}></img>
+                </div>
+                <div className="shopping-cart-list-product-block-right">
+                    <p className="product-name">{product.name}</p>
+                    <p className="product-price">
+                        {formatPrice(product.salePrice)}
+                    </p>
+                </div>
+
+                <div className="shopping-cart-list-product-bottom">
+                    <i
+                        onClick={() => handleProductOut(product)}
+                        className="fa-solid fa-trash delete-product"
+                    ></i>
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
                     <ul className="button-event">
                         <li onClick={() => handleDecrementProduct(product)}>
                             -

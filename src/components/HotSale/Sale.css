@@ -76,7 +76,11 @@ p {
 
 .hotsale-listproduct-product .price2 {
     text-decoration: line-through;
+<<<<<<< HEAD
     font-size: 10px;
+=======
+    font-size: 14px;
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
     color: gray;
 }
 
@@ -105,7 +109,10 @@ p {
 }
 
 .buy a {
+<<<<<<< HEAD
     font-size: 14px;
+=======
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
     padding: 7px 17px;
     border-radius: 4px;
     background: #d70018;
@@ -115,6 +122,7 @@ p {
     justify-content: center;
     align-items: center;
 }
+<<<<<<< HEAD
 
 /*  */
 .product-price-percent {
@@ -139,3 +147,5 @@ p {
     text-align: center;
     margin-left: 9px;
 }
+=======
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41

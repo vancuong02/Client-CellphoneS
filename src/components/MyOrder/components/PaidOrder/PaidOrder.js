@@ -6,7 +6,11 @@ import { formatPrice } from "../../../../untils/index";
 const orderItem = (item) => (
     <div className="all-myorder-item">
         <div className="all-myorder-item-img">
+<<<<<<< HEAD
             <img src={item.image} alt="alllllll"></img>
+=======
+            <img src={item.image}></img>
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
         </div>
         <div className="all-myorder-item-name">
             <p>{item.name}</p>

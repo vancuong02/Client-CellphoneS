@@ -10,6 +10,7 @@ import {
 } from "../../actions/OrderAction";
 import "./Order.css";
 import Payment from "./Payment";
+<<<<<<< HEAD
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { formatPrice } from "../../untils";
 
@@ -18,6 +19,13 @@ function Order() {
     const { register, handleSubmit } = useForm();
     const cartItems = useSelector((state) => state.cart.cartItems);
     const userInfo = useSelector((state) => state.userSignin.userInfo);
+=======
+
+function Order(props) {
+    const dispatch = useDispatch();
+    const { register, handleSubmit } = useForm();
+
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
     const allProvince = useSelector((state) => state.address.province);
     const allDistrict = useSelector((state) => state.address.district);
     const allWard = useSelector((state) => state.address.ward);
@@ -47,12 +55,22 @@ function Order() {
         setListWard(!listWard);
     };
 
+<<<<<<< HEAD
+=======
+    const cartItems = useSelector((state) => state.cart.cartItems);
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
     const totalPrice = cartItems.reduce(
         (total, item) => total + item.qty * item.salePrice,
         0
     );
+<<<<<<< HEAD
 
     const onSubmit = (data) => {
+=======
+    const userInfo = useSelector((state) => state.userSignin.userInfo);
+
+    const onSubmit = async (data) => {
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
         if (!data) {
             alert("Bạn hãy nhập đầy đủ thông tin");
             return;
@@ -73,7 +91,11 @@ function Order() {
             user: userInfo,
         };
 
+<<<<<<< HEAD
         dispatch(OrderInfo(Order));
+=======
+        await dispatch(OrderInfo(Order));
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
     };
 
     useEffect(() => {
@@ -102,6 +124,7 @@ function Order() {
     };
 
     return (
+<<<<<<< HEAD
         <section id="orElement">
             <div className="order">
                 <div className="payment-header">
@@ -312,6 +335,179 @@ function Order() {
                         </div>
                     </div>
                 </div>
+=======
+        <section id="order">
+            <div className="order-content">
+                <form className="order-page" onSubmit={handleSubmit(onSubmit)}>
+                    <div className="customer">
+                        <h4>THÔNG TIN KHÁCH HÀNG </h4>
+                        <div className="form-customer">
+                            <input
+                                placeholder="Họ và tên"
+                                {...register("name")}
+                                required
+                            ></input>
+                            <input
+                                placeholder="Số điện thoại"
+                                {...register("phone")}
+                                required
+                            ></input>
+                        </div>
+                    </div>
+
+                    <div className="address">
+                        <h4>CHỌN ĐỊA CHỈ</h4>
+                        <div className="address-form">
+                            <div className="province">
+                                {allProvince ? (
+                                    <button
+                                        className=""
+                                        onClick={(e) => handleListProvince(e)}
+                                    >
+                                        {chooseProvince.name}
+                                    </button>
+                                ) : (
+                                    <button
+                                        className=""
+                                        onClick={(e) => handleListProvince(e)}
+                                    >
+                                        {chooseProvince.name}
+                                    </button>
+                                )}
+                                {listProvince ? (
+                                    <div className="select">
+                                        <div className="select-list">
+                                            <aside>
+                                                {allProvince
+                                                    ? allProvince.data.map(
+                                                          (item) => (
+                                                              <span
+                                                                  onClick={() =>
+                                                                      handleSelectProvince(
+                                                                          item.ProvinceName,
+                                                                          item.ProvinceID
+                                                                      )
+                                                                  }
+                                                              >
+                                                                  {
+                                                                      item.ProvinceName
+                                                                  }
+                                                              </span>
+                                                          )
+                                                      )
+                                                    : ""}
+                                            </aside>
+                                        </div>
+                                    </div>
+                                ) : (
+                                    ""
+                                )}
+                            </div>
+                            <div className="province">
+                                {chooseProvince ? (
+                                    <button
+                                        className=""
+                                        onClick={(e) => handleListDistrict(e)}
+                                    >
+                                        {chooseDistrict.name}
+                                    </button>
+                                ) : (
+                                    <button
+                                        className=""
+                                        onClick={(e) => handleListProvince(e)}
+                                        disabled="disabled"
+                                    >
+                                        {chooseDistrict.name}
+                                    </button>
+                                )}
+                                {listDistrict ? (
+                                    <div className="select">
+                                        <div className="select-list">
+                                            <aside>
+                                                {allDistrict
+                                                    ? allDistrict.data.map(
+                                                          (item) => (
+                                                              <span
+                                                                  onClick={() =>
+                                                                      handleSelectDistrict(
+                                                                          item.DistrictName,
+                                                                          item.DistrictID
+                                                                      )
+                                                                  }
+                                                              >
+                                                                  {
+                                                                      item.DistrictName
+                                                                  }
+                                                              </span>
+                                                          )
+                                                      )
+                                                    : ""}
+                                            </aside>
+                                        </div>
+                                    </div>
+                                ) : (
+                                    ""
+                                )}
+                            </div>
+                            <div className="province">
+                                {chooseWard ? (
+                                    <button
+                                        className=""
+                                        onClick={(e) => handleListWard(e)}
+                                    >
+                                        {chooseWard.name}
+                                    </button>
+                                ) : (
+                                    <button
+                                        className=""
+                                        onClick={(e) => handleListWard(e)}
+                                        disabled
+                                    >
+                                        {chooseWard.name}
+                                    </button>
+                                )}
+                                {listWard ? (
+                                    <div className="select">
+                                        <div className="select-list">
+                                            <aside>
+                                                {allWard &&
+                                                allWard.data !== null
+                                                    ? allWard.data.map(
+                                                          (item) => (
+                                                              <span
+                                                                  onClick={() =>
+                                                                      handleSelectWard(
+                                                                          item.WardName,
+                                                                          item.WardCode
+                                                                      )
+                                                                  }
+                                                              >
+                                                                  {
+                                                                      item.WardName
+                                                                  }
+                                                              </span>
+                                                          )
+                                                      )
+                                                    : ""}
+                                            </aside>
+                                        </div>
+                                    </div>
+                                ) : (
+                                    ""
+                                )}
+                            </div>
+                            <div className="province">
+                                <input
+                                    placeholder="Số nhà, đường ..."
+                                    {...register("more")}
+                                    required
+                                ></input>
+                            </div>
+                        </div>
+                    </div>
+                    <Payment></Payment>
+                </form>
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
             </div>
         </section>
     );

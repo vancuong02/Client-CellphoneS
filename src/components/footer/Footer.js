@@ -2,7 +2,11 @@
 import React from "react";
 import "./Footer.css";
 
+<<<<<<< HEAD
 function Footer() {
+=======
+function Footer(props) {
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
     const currentYear = new Date().getFullYear();
     return (
         <section id="footer">
@@ -25,6 +29,7 @@ function Footer() {
                     </div>
                     <div className="footer-top-sp">
                         <h2>Always-on Support</h2>
+<<<<<<< HEAD
                         <p>Support: +84 971 087 088 (07:00-21:00)</p>
                         <p>Delivery: 1800 6936 (07:00-21:00)</p>
                         <p>Email: cellphones@gmail.com</p>
@@ -34,6 +39,10 @@ function Footer() {
                         <p>
                             <img src="https://cdn.dangkywebsitevoibocongthuong.com/wp-content/uploads/2018/06/logo.png"></img>
                         </p>
+=======
+                        <p>Support 028.71.087.088 (07:00-21:00)</p>
+                        <p>Delivery 1800 6936 (07:00-21:00)</p>
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
                     </div>
                     <div className="footer-top-delivery">
                         <h2>Delivery</h2>

@@ -7,10 +7,20 @@
     margin: auto;
     padding-top: 80px;
 }
+<<<<<<< HEAD
 .detail-title {
     text-align: left;
     padding: 0.5rem 0;
 }
+=======
+.detail-title h2 {
+    text-align: left;
+    padding: 0.5rem 0;
+    font-weight: 600;
+    margin: 0;
+}
+
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 .detail-info {
     display: flex;
 }
@@ -96,7 +106,11 @@
     display: flex;
 }
 
+<<<<<<< HEAD
 .detail-info-right-buy-installment a {
+=======
+.detail-info-right-buy-installment div {
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
     background: #277cea;
     border: solid 1px #1d72e0;
     margin-top: 10px;
@@ -111,13 +125,21 @@
     cursor: pointer;
 }
 
+<<<<<<< HEAD
 .detail-info-right-buy-installment a:hover {
+=======
+.detail-info-right-buy-installment div:hover {
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
     background: #fff;
     color: #277cea;
     text-decoration: none;
 }
 
+<<<<<<< HEAD
 .detail-info-right-buy-installment a:nth-child(2) {
+=======
+.detail-info-right-buy-installment div:nth-child(2) {
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
     margin-left: 5px;
 }
 
@@ -169,6 +191,7 @@
 /* rate star */
 .rate {
     border: 1px solid #eee;
+<<<<<<< HEAD
     padding: 1.5rem 0;
 }
 .rate-star-title {
@@ -176,6 +199,11 @@
     font-size: 23px;
     padding: 1rem 0;
 }
+=======
+    padding: 1rem 0;
+}
+
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 .thongke span {
     display: flex;
     font-size: 14px;
@@ -231,12 +259,20 @@
 .comment-area textarea {
     padding: 10px;
     width: 1000px;
+<<<<<<< HEAD
     height: 112px;
+=======
+    height: 80px;
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
     outline: none;
     border: 1px solid #eee;
 }
 .comment-send {
+<<<<<<< HEAD
     margin-top: 1rem;
+=======
+    margin-top: 8px;
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 }
 .comment-send button {
     padding: 5px 25px;
@@ -254,7 +290,12 @@
 .all-comment {
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
     margin-top: 1rem;
+=======
+    padding-bottom: 24px;
+    margin-top: 16px;
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 }
 .all-comment-info {
     display: flex;
@@ -310,7 +351,10 @@
     margin-bottom: 0;
     color: #e11b1e;
     margin-left: 1rem;
+<<<<<<< HEAD
     cursor: pointer;
+=======
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 }
 
 .all-comment-rep-list {
@@ -410,6 +454,7 @@
     cursor: pointer;
 }
 
+<<<<<<< HEAD
 @media screen and (max-width: 1000px) {
     .detail {
         width: 100%;
@@ -458,4 +503,9 @@
         padding: 0.2rem 0.5rem;
         border-radius: 30px;
     }
+=======
+.evaluate {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 8px;
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 }

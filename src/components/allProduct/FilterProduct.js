@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+<<<<<<< HEAD
 
 import { filterProductByPrice } from "../../actions/ProductAction";
+=======
+import { filterProductByPrice } from "../../actions/ProductAction";
+import FilterMenu from "./FilterMenu/FilterMenu";
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 
 function FilterProduct() {
     const dispatch = useDispatch();
@@ -16,6 +21,10 @@ function FilterProduct() {
 
     return (
         <div className="filter">
+<<<<<<< HEAD
+=======
+            <FilterMenu></FilterMenu>
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
             <div className="options-price">
                 <input
                     id="priceStart"

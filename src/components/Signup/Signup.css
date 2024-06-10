@@ -15,13 +15,19 @@ textarea {
     font-family: "Montserrat", sans-serif;
     margin: 0;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 ul,
 label {
     margin: 0;
     padding: 0;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 body a:hover,
 body a {
     text-decoration: none;
@@ -55,7 +61,10 @@ body a {
     text-align: center;
     letter-spacing: 2px;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 .login-title h1 {
     margin: 0 0 0px;
     font-size: 45px;
@@ -64,6 +73,7 @@ body a {
     font-weight: 400;
     color: white;
 }
+<<<<<<< HEAD
 
 .login-title span {
     font-size: 12px;
@@ -73,6 +83,14 @@ body a {
     color: #33b5e5;
 }
 
+=======
+.login-title span {
+    font-size: 12px;
+}
+.login-title span .fa {
+    color: #33b5e5;
+}
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 .login-title span a {
     color: #33b5e5;
     font-weight: 600;
@@ -139,6 +157,13 @@ body a {
     color: red;
 }
 
+<<<<<<< HEAD
+=======
+.login-container input[type="email"] {
+    color: #ccc6c6;
+}
+
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 .login-container input[type="email"]:hover {
     border-color: #28d;
 }
@@ -149,7 +174,10 @@ body a {
     border-color: #33b5e5;
     color: #333;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 .login
     input[type="email"]:hover
     .login
@@ -170,7 +198,10 @@ body a {
 .login input[type="submit"]:focus {
     border-color: #05a;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 .form .social-icons {
     font-size: 20px;
 }
@@ -179,22 +210,34 @@ body a {
     margin: 0px 0px 20px 0px;
     text-align: center;
 }
+<<<<<<< HEAD
 
 .w3_bottom {
     margin: 10px 0;
 }
 
+=======
+.w3_bottom {
+    margin: 10px 0;
+}
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 .bottom-header h3 {
     color: #33b5e5;
     text-align: center;
     font-size: 20px;
     margin-top: 0px;
 }
+<<<<<<< HEAD
 
 .bottom-header p {
     padding: 12px;
 }
 
+=======
+.bottom-header p {
+    padding: 12px;
+}
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 /* buttons */
 .social-links ul li {
     display: inline-block;
@@ -269,6 +312,7 @@ input[type="submit"]:hover {
 .bottom-text {
     box-sizing: border-box;
     color: #666666;
+<<<<<<< HEAD
     font-size: 14px;
     text-align: center;
     margin-top: 16px;
@@ -278,6 +322,15 @@ input[type="submit"]:hover {
     font-size: 14px;
 }
 
+=======
+    font-size: 12px;
+    text-align: center;
+    margin-top: 16px;
+}
+.bottom-text p {
+    font-size: 14px;
+}
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 .bottom-text a {
     color: #33b5e5;
     text-decoration: none;
@@ -293,11 +346,17 @@ input[type="submit"]:hover {
     -o-transition: 0.5s ease-in;
     -moz-transition: 0.5s ease-in;
 }
+<<<<<<< HEAD
 
 .bottom-text p a:hover {
     color: #ef4d4d;
 }
 
+=======
+.bottom-text p a:hover {
+    color: #ef4d4d;
+}
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
 .bottom-text h4 {
     font-size: 10px;
     color: #33b5e5;
@@ -309,7 +368,245 @@ input[type="submit"]:hover {
     -o-transition: 0.5s ease-in;
     -moz-transition: 0.5s ease-in;
 }
+<<<<<<< HEAD
 
 .bottom-text h4 a:hover {
     color: #ef4d4d;
 }
+=======
+.bottom-text h4 a:hover {
+    color: #ef4d4d;
+}
+
+/* responsive design */
+@media only screen and (max-width: 1080px) {
+    .login-title {
+        padding: 30px 0;
+    }
+    .login-title h1 {
+        font-size: 35px;
+        letter-spacing: 4px;
+    }
+    .login {
+        width: 370px;
+        margin: 14px auto;
+        font-size: 15px;
+    }
+    .login-header {
+        padding: 13px;
+        font-size: 1.2em;
+    }
+    .w3l_grid {
+        padding: 10px 20px 20px 20px;
+    }
+
+    .w3_bottom {
+        margin: 18px 0;
+    }
+    .bottom-header h3 {
+        font-size: 16px;
+    }
+    .bottom-text p {
+        font-size: 12px;
+    }
+
+    .bottom-text p a {
+        margin-left: 4px;
+    }
+    .bottom-text a {
+        color: #33b5e5;
+        text-decoration: none;
+        font-size: 12px;
+    }
+    .login input[type="Email"],
+    .login input[type="password"] {
+        margin: 20px 0px;
+        padding: 10px;
+    }
+
+    .login input[type="Email"],
+    .login input[type="password"] {
+        margin: 12px 0px;
+        width: 100%;
+        border-width: 1px;
+        border-style: solid;
+        padding: 13px;
+        outline: none;
+        font-family: inherit;
+        font-size: 0.9em;
+    }
+    .social-links {
+        margin: 0px 0px 18px 0px;
+    }
+    .social-links a {
+        width: 37px;
+        height: 37px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .login-title {
+        padding: 28px 0;
+    }
+    .login-title h1 {
+        font-size: 34px;
+        letter-spacing: 4px;
+    }
+    .login {
+        width: 340px;
+        margin: 9px auto;
+        font-size: 11px;
+    }
+    .login-header {
+        padding: 12px;
+        font-size: 1.2em;
+    }
+    .w3l_grid {
+        padding: 19px;
+    }
+
+    .w3_bottom {
+        margin: 18px 0;
+    }
+    .bottom-header h3 {
+        font-size: 16px;
+    }
+    .bottom-text p {
+        font-size: 11px;
+    }
+
+    .bottom-text p a {
+        margin-left: 4px;
+    }
+    .bottom-text a {
+        font-size: 11px;
+    }
+    .login input[type="Email"],
+    .login input[type="password"] {
+        margin: 20px 0px;
+        padding: 10px;
+        font-size: 0.9em;
+    }
+    .login input[type="Email"],
+    .login input[type="password"] {
+        margin: 20px 0px;
+        width: 100%;
+        border-width: 1px;
+        border-style: solid;
+        padding: 13px;
+        outline: none;
+        font-family: inherit;
+        font-size: 0.9em;
+    }
+    .social-links {
+        margin: 0px 0px 18px 0px;
+    }
+    .social-links a {
+        width: 37px;
+        height: 37px;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .login-title h1 {
+        font-size: 30px;
+    }
+    .login-title {
+        padding: 26px 0;
+    }
+    .login-header {
+        padding: 8px;
+    }
+    .login {
+        width: 360px;
+        margin: 11px auto;
+        font-size: 13px;
+    }
+    .w3l_grid {
+        padding: 15px;
+    }
+    .login input[type="Email"],
+    .login input[type="password"] {
+        margin: 14px 0px;
+        padding: 9px;
+        font-size: 0.9em;
+    }
+    .login-container input[type="submit"] {
+        padding: 9px 0px;
+        font-size: 13px;
+    }
+    .bottom-header h3 {
+        font-size: 12px;
+    }
+    .w3_bottom {
+        margin: 16px 0;
+    }
+    .social-links a {
+        width: 34px;
+        height: 34px;
+    }
+    .social-links {
+        margin: 0px 0px 16px 0px;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .login-title h1 {
+        font-size: 25px;
+    }
+    .login {
+        width: 290px;
+        margin: 8px auto;
+        font-size: 12px;
+    }
+    .w3l_grid {
+        padding: 13px;
+    }
+    .w3_bottom {
+        margin: 14px 0;
+    }
+    .social-links {
+        margin: 0px 0px 14px 0px;
+    }
+    .social-links a {
+        width: 30px;
+        height: 30px;
+    }
+    .social-links i {
+        line-height: 28px;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .login-title h1 {
+        font-size: 23px;
+    }
+    .login-header {
+        padding: 5px;
+    }
+    .login input[type="Email"],
+    .login input[type="password"] {
+        margin: 12px 0px;
+        padding: 7px;
+        font-size: 0.9em;
+    }
+    .login-container input[type="submit"] {
+        padding: 7px 0px;
+        font-size: 12px;
+    }
+    .social-links i {
+        line-height: 26px;
+        font-size: 15px;
+    }
+    .social-links a {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .login-title h1 {
+        font-size: 20px;
+    }
+}
+>>>>>>> a0e4353579f6cb22e693e110f78edb9f9e799c41
