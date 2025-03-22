@@ -76,7 +76,7 @@ function Carousel(props) {
             >
               {banners.map((src, index) => (
                 <div key={index} className="banner-home-page">
-                  <img height={400} src={src} alt={`Banner ${index + 1}`} />
+                  <img height={450} src={src} alt={`Banner ${index + 1}`} />
                 </div>
               ))}
             </Slider>

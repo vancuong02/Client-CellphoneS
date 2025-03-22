@@ -71,10 +71,9 @@ function Product(props) {
   const handleHeartClick = async (product) => {
     try {
       if (userInfo) {
-        await axios.put(
-          `http://localhost:4000/products/updateId/${product._id}`,
-          { ...product, like: true }
-        );
+        await axios.post(`http://localhost:4000/products/like/${product._id}`, {
+          user_id: userInfo._id,
+        });
 
         message.success({
           content: "Đã thêm vào danh sách yêu thích",

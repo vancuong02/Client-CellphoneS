@@ -14,6 +14,7 @@ import { formatPrice } from "../../../../untils";
 import Avatar from "../../../../assets/logo/avatar.jpg";
 
 export default function DashBoard() {
+  const { userInfo } = useSelector((state) => state.userSignin);
   // Tổng user
   const users = useSelector((state) => state?.users?.user);
   const quantityUsers = users?.length || "0";
@@ -40,7 +41,7 @@ export default function DashBoard() {
           <div className="dashboard-top-content">
             <li className="dashboard-top-content-avatar">
               <img src={Avatar} />
-              <span>Nguyễn Văn Cường</span>
+              <span>{userInfo.name}</span>
             </li>
             <li className="dashboard-top-content-bell"></li>
           </div>
