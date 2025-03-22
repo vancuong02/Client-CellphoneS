@@ -1,5 +1,4 @@
 import React from "react";
-import Chatbox from "../components/Chat/Chat";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import Carousel from "../components/Slider/Carousel";
@@ -14,7 +13,6 @@ import ComputerCase from "../components/HotSale/components/ComputerCase";
 function HomePage() {
   return (
     <div style={{ position: "relative" }}>
-      <Chatbox />
       <Header></Header>
       <Carousel></Carousel>
       <ScreenComputer></ScreenComputer>
