@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import "./Header.css";
 import { SignoutUser, getUserById } from "../../actions/UserAction";
 import { searchProduct } from "../../actions/ProductAction";
+import LogoPage from "../../assets/logo/logo-page.svg";
 
 import {
   DownOutlined,
@@ -27,7 +28,7 @@ function Header() {
 
   const { userInfo } = useSelector((state) => state.userSignin);
 
-  const { user } = useSelector((state) => state.users);
+  // const { user } = useSelector((state) => state.users);
 
   useEffect(() => {
     if (userInfo && userInfo._id) {
@@ -52,9 +53,10 @@ function Header() {
         <div className="logo">
           <Link to="/">
             <img
-              src="https://file.hstatic.net/200000636033/file/logo_fd11946b31524fbe98765f34f3de0628.svg"
               alt="logo"
               width={140}
+              src={LogoPage}
+              // src="https://file.hstatic.net/200000636033/file/logo_fd11946b31524fbe98765f34f3de0628.svg"
             />
           </Link>
         </div>
@@ -77,15 +79,15 @@ function Header() {
           <li>
             <Link to="/product"> Sản Phẩm </Link>
           </li>
-          {user ? (
+          {userInfo ? (
             <li onClick={() => setShowAccount2(!showAccount2)}>
               <Link to="#">
-                {user.name || user.user.name}
+                {userInfo.name || ""}
                 <DownOutlined style={{ fontSize: "14px" }} />
               </Link>
               {showAccount2 ? (
                 <div className="menu-drop">
-                  {user.isAdmin ? <Link to="/admin">Admin</Link> : ""}
+                  {userInfo.isAdmin ? <Link to="/admin">Admin</Link> : ""}
                   <Link to="/user/profile">Tài khoản của tôi</Link>
                   <Link to="/myOrder">Đơn hàng</Link>
                   <Link to="#" onClick={() => handleSignout()}>
@@ -119,7 +121,7 @@ function Header() {
                 style={{ fontSize: "30px" }}
               ></ShoppingCartOutlined>
 
-              <span className="count">{user ? amount : 0}</span>
+              <span className="count">{userInfo ? amount : 0}</span>
             </Link>
           </li>
         </ul>

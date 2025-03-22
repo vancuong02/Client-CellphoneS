@@ -1,209 +1,217 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 p {
-    margin: 0;
+  margin: 0;
 }
 .hotsale-listproduct-product a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 #hotsale {
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .hotsale {
-    width: 80%;
-    margin: auto;
-    padding: 1rem 0;
+  width: 80%;
+  margin: auto;
+  padding: 0;
 }
 .hotsale h2 {
-    color: #d70018;
-    display: flex;
-    text-transform: uppercase;
+  color: #d70018;
+  display: flex;
+  text-transform: uppercase;
 }
 
 /*              */
 
 .hotsale-listproduct {
-    grid-gap: 0;
-    gap: 0;
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 12px;
-    justify-content: space-evenly;
+  grid-gap: 0;
+  gap: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+  justify-content: space-evenly;
 }
 .hotsale-listproduct-product {
-    position: relative;
-    width: calc(20% - 12px);
-    height: 100%;
-    text-align: center;
-    padding: 2rem 1rem 1rem 1rem;
-    border: 1px solid #eee;
-    margin-bottom: 20px;
-    border-radius: 15px;
-    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.1),
-        0 2px 6px 2px rgba(60, 64, 67, 0.15);
+  position: relative;
+  width: calc(20% - 12px);
+  height: 100%;
+  text-align: center;
+  padding: 16px 12px 12px;
+  border: 1px solid #eee;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.1),
+    0 2px 6px 2px rgba(60, 64, 67, 0.15);
 }
+
 .hotsale-listproduct-product-name {
-    height: 80px;
+  height: 60px; /* Đặt chiều cao cố định */
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Giới hạn số dòng hiển thị */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
 }
+
 .hotsale-listproduct-product:hover {
-    box-sizing: border-box;
-    transition: 0.5s;
+  box-sizing: border-box;
+  transition: 0.5s;
 }
 
 .hotsale-listproduct-product img {
-    width: 150px;
-    height: 150px;
+  width: auto;
+  height: 130px;
 }
 .hotsale-listproduct-product:hover img {
-    transform: scale(1.05);
-    transition: 0.5s;
+  transform: scale(1.05);
+  transition: 0.5s;
 }
 .hotsale-listproduct-product p {
-    padding: 1rem 0;
-    font-weight: 700;
-    color: #222;
-    font-size: 16px;
+  padding: 12px 0;
+  font-weight: 700;
+  color: #222;
+  font-size: 14px;
 }
 .hotsale-listproduct-product .price {
-    display: flex;
-    justify-content: space-around;
-    line-height: 25px;
+  display: flex;
+  justify-content: space-around;
+  line-height: 25px;
 }
 .hotsale-listproduct-product .price1 {
-    color: #d70018;
-    font-weight: 700;
-    font-size: 16px;
+  color: #d70018;
+  font-weight: 700;
+  font-size: 15px;
 }
 .hotsale-listproduct-product .price2 {
-    text-decoration: line-through;
-    font-size: 16px;
-    color: gray;
+  text-decoration: line-through;
+  font-size: 13px;
+  color: gray;
 }
 
 .discount {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background: #d70018;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #d70018;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .discount p {
-    color: white;
-    margin-bottom: 0;
+  color: white;
+  margin-bottom: 0;
 }
 
 .buy {
-    font-size: 14px;
-    margin-top: 20px;
-    color: white;
-    border: none;
-    display: flex;
-    padding: 8px 15px;
-    background: #d70018;
-    border-radius: 40px;
-    align-items: center;
-    justify-content: center;
+  font-size: 14px;
+  margin-top: 12px;
+  color: white;
+  border: none;
+  display: flex;
+  padding: 8px 15px;
+  background: #d70018;
+  border-radius: 40px;
+  align-items: center;
+  justify-content: center;
 }
 .buy:hover {
-    cursor: pointer;
-    opacity: 0.8;
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 .button,
 .filter {
-    display: flex;
+  display: flex;
 }
 .thapdencao,
 .caodenthap,
 .filter-type button,
 .filter-price button {
-    background: #d70018;
-    color: white;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 8px 12px;
-    margin-right: 1rem;
-    position: relative;
+  background: #d70018;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  margin-right: 1rem;
+  position: relative;
 }
 
 .filter {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .filter ul {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 .filter li {
-    padding: 4px 12px;
-    border: 1px solid #eee;
-    cursor: pointer;
-    margin-right: 1rem;
+  padding: 4px 12px;
+  border: 1px solid #eee;
+  cursor: pointer;
+  margin-right: 1rem;
 }
 .filter li:hover {
-    background: #d70018;
-    color: white;
-    transition: 0.5s;
+  background: #d70018;
+  color: white;
+  transition: 0.5s;
 }
 .options-price {
-    display: flex;
-    margin-top: 1rem;
+  display: flex;
+  margin-top: 1rem;
 }
 .options-price input {
-    border: 1px solid #8e8e8e;
-    outline: none;
+  border: 1px solid #8e8e8e;
+  outline: none;
 }
 .options-price button {
-    border: 1px solid #d70018;
-    outline: none;
-    padding: 8px;
-    background: #d70018;
-    color: white;
+  border: 1px solid #d70018;
+  outline: none;
+  padding: 8px;
+  background: #d70018;
+  color: white;
 }
 #priceStart,
 #priceEnd {
-    padding: 4px 10px;
-    margin-right: 4px;
+  padding: 4px 10px;
+  margin-right: 4px;
 }
 
 .search-product {
-    padding-top: 80px;
-    display: block;
+  padding-top: 80px;
+  display: block;
 }
 
 /* Star */
 .interact-product-element {
-    display: flex;
-    margin-top: 20px;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  margin-top: 12px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .product-heart-icon {
-    font-size: 20px;
-    color: #b8091d;
+  font-size: 20px;
+  color: #b8091d;
 }
 
 .product-heart-icon:hover {
-    font-size: 22px;
-    color: #fd2d04;
-    cursor: pointer;
-    transition: all ease-in 1s;
+  font-size: 22px;
+  color: #fd2d04;
+  cursor: pointer;
+  transition: all ease-in 1s;
 }
