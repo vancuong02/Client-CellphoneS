@@ -12,12 +12,10 @@ export default function VnPaySuccess() {
   useEffect(() => {
     const getResultVNPay = async () => {
       const query = location.search;
-      console.log("Query", query);
 
       const { data } = await axios.get(
         `http://localhost:4000/order/payment-success${query}`
       );
-      console.log(data);
       if (data.status === "success") {
         dispatch({ type: "CART_EMPTY" });
         localStorage.removeItem("cartItems");
@@ -27,6 +25,7 @@ export default function VnPaySuccess() {
 
     getResultVNPay();
   }, [location.search]);
+
   return (
     <section id="order-success">
       <div className="order-success">
